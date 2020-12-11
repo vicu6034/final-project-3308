@@ -1,0 +1,26 @@
+<%- include('../partials/header'); %>
+
+<%- include('../partials/menu'); %>
+
+<main>
+    <h4>Movie Reviews</h4>
+    <table class="table table-bordered" id="stats_table">
+        <tr>
+            <th class="align-bottom" rowspan="2">Movie</th>
+            <th class="align-bottom"rowspan="2">Review</th>
+            <th class="text-center" colspan="2">Review Date</th>
+        </tr>
+        <% if (reviews) { 
+            var review_rows = '';
+             reviews.forEach(function(item){
+                 review_rows += '<tr><td>' + document.getElementById(movie) + '</td>';
+                 review_rows += '<td>' + document.getElementById(review) + '</td>';
+                 review_rows += '<td>' + document.getElementById(review_date) + '</td>';
+            });%>
+        <%- review_rows %>
+        <% } %>
+    </table>
+</main>
+
+<%- include('../partials/footer'); %>
+

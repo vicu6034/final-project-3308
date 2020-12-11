@@ -1,0 +1,26 @@
+<%- include('../partials/header'); %>
+
+<%- include('../partials/menu'); %>
+
+<main>
+    <div class ="containter-fluid p-4 bg-secondary text-white">
+        <h5>Movie Database search:</h5>
+        <form id ="query" class ="col-6 offset-3">
+            <div class = "row justify-content-center">
+                <div class = "col">
+                    <input type ="text" class ="form-control" id ="movieInput" placeholder="Search">
+                </div>
+                <div class = "col">
+                    <button type ="submit" class ="btn btn-primary">Submit</button>
+                </div>
+             </div>
+        </form>
+    </div>
+    <div class = "containter-fluid">
+        <div class = "row justify-content-center" id = "img_display">
+        
+        </div>
+    </div>
+</main>
+<script src="resources/js/script.js"></script>
+<%- include('../partials/footer'); %>
